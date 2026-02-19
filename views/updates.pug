@@ -1,0 +1,27 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        .container-1
+            h1 Update Custom Object Form
+            
+            a(href="/") ← Return to the homepage
+            
+            .form-wrapper 
+                form(method="POST" action="/update-cobj")
+                    div
+                        label(for="name") Name:
+                        input(type="text" id="name" name="name" required)
+                
+                    div
+                        label(for="actor_name") Actor Name:
+                        input(type="text" id="actor_name" name="actor_name" required)
+                
+                    div
+                        label(for="superhero_name") Superhero Name:
+                        input(type="text" id="superhero_name" name="superhero_name" required)
+                
+                    button(type="submit") Submit

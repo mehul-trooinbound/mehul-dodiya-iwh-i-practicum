@@ -1,13 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 body, * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #FF7A59 0%, #FF5C35 100%);
+    min-height: 100vh;
+    padding: 2rem;
 }
 
 h1 {
-    margin: 1rem;
+    margin: 0 0 1.5rem 0;
+    color: #2d3748;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+a {
+    display: inline-block;
+    color: #FF7A59;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+a:hover {
+    background: #FF7A59;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+.container-1 {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
 
 .cards {
@@ -32,27 +79,112 @@ h1 {
 
 .form-wrapper {
     font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: #f7fafc;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-label, input {
-    margin-top: 5px;
+form div {
+    margin-bottom: 1.5rem;
+}
+
+label {
     display: block;
-    font-size: inherit;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
 }
 
 input[type="text"] {
-    padding: .25rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
 }
 
+input[type="text"]:focus {
+    outline: none;
+    border-color: #FF7A59;
+    box-shadow: 0 0 0 3px rgba(255, 122, 89, 0.1);
+}
+
+button[type="submit"],
 input[type="submit"] {
-    background-color: lightgrey;
+    background: linear-gradient(135deg, #FF7A59 0%, #FF5C35 100%);
+    color: white;
     border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+    padding: 0.875rem 2rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255, 122, 89, 0.3);
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 122, 89, 0.4);
+}
+
+button[type="submit"]:active,
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+thead {
+    background: linear-gradient(135deg, #FF7A59 0%, #FF5C35 100%);
+}
+
+thead th {
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody td {
+    padding: 1rem 1.5rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 1.5rem;
 }
